@@ -39,16 +39,22 @@ then
 	echo 'running'
 else
 	getvids # Get a list of the current videos in the folder
-	let PLAYING+=1
-	if [ $PLAYING -ge $CURRENT ] # if PLAYING is greater than or equal to CURRENT
+	if [ $CURRENT -ge 0 ] #only play videos if there are more than one video
 	then
-		PLAYING=0 # Reset to 0 so we play the "first" video
-	fi
+		let PLAYING+=1
+		if [ $PLAYING -ge $CURRENT ] # if PLAYING is greater than or equal to CURRENT
+		then
+			PLAYING=0 # Reset to 0 so we play the "first" video
+		fi
 
- 	#echo ${VIDS[$PLAYING]}
- 	if [ -f ${VIDS[$PLAYING]} ]; then
-		/usr/bin/omxplayer -r -o hdmi ${VIDS[$PLAYING]} # Play video
+	 	#echo ${VIDS[$PLAYING]}
+	 	if [ -f ${VIDS[$PLAYING]} ]; then
+			/usr/bin/omxplayer -r -o hdmi ${VIDS[$PLAYING]} # Play video
+		fi
+		# echo "Array size= $CURRENT" # error checking code
+	else
+		echo "Insert USB or add videos to /home/pi/video, sleeping for 5 seconds"
+		sleep 5
 	fi
-	# echo "Array size= $CURRENT" # error checking code
 fi
 done
