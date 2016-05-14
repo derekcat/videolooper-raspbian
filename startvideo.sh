@@ -45,8 +45,10 @@ else
 		PLAYING=0 # Reset to 0 so we play the "first" video
 	fi
 
- 	echo ${VIDS[$PLAYING]}
-	/usr/bin/omxplayer -r -o hdmi ${VIDS[$PLAYING]} # Play video
+ 	#echo ${VIDS[$PLAYING]}
+ 	if [ -f ${VIDS[$PLAYING]} ]; then
+		/usr/bin/omxplayer -r -o hdmi ${VIDS[$PLAYING]} # Play video
+	fi
 	# echo "Array size= $CURRENT" # error checking code
 fi
 done
