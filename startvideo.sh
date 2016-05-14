@@ -16,7 +16,7 @@ getvids () # Since I want this to run in a loop, it should be a function
 {
 unset VIDS # Empty the VIDS array
 CURRENT=0 # Reinitializes the video count
-IFS=$'\t' # Dont split up by spaces, only new lines when setting up the for loop
+IFS=$'\n' # Dont split up by spaces, only new lines when setting up the for loop
 for f in `ls $LOCAL_FILES | grep -E $FILE_FORMATS` # Step through the local files
 do
 	VIDS[$CURRENT]=$LOCAL_FILES$f # add the filename found above to the VIDS array
