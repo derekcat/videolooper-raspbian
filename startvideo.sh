@@ -39,7 +39,7 @@ then
 	echo 'running'
 else
 	getvids # Get a list of the current videos in the folder
-	if [ $CURRENT -ge 0 ] #only play videos if there are more than one video
+	if [ $CURRENT -gt 0 ] #only play videos if there are more than one video
 	then
 		let PLAYING+=1
 		if [ $PLAYING -ge $CURRENT ] # if PLAYING is greater than or equal to CURRENT
@@ -53,8 +53,8 @@ else
 		fi
 		# echo "Array size= $CURRENT" # error checking code
 	else
-		echo "Insert USB or add videos to /home/pi/video, sleeping for 5 seconds"
-		sleep 5
+		echo "Insert USB with videos and restart or add videos to /home/pi/video and run ./startvideo.sh"
+		exit
 	fi
 fi
 done
