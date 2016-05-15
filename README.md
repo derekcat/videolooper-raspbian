@@ -18,11 +18,14 @@ There are two methods of installation, either:
 
 ###Install omxplayer
 ```sudo apt-get update
+
 sudo apt-get -y install omxplayer```
 
 ###Setup auto mounting of usb stick
 ```sudo mkdir -p /mnt/usbdisk
+
 sudo echo \"/dev/sda1	/mnt/usbdisk	vfat	ro,defaults	0	0\" | sudo tee -a /etc/fstab
+
 sudo mount /mnt/usbdisk```
 
 ###Create folder for videos in home directory
@@ -30,6 +33,7 @@ sudo mount /mnt/usbdisk```
 
 ###Download startvideo.sh and put it in /home/pi/
 ```wget https://raw.githubusercontent.com/derekcat/videolooper-raspbian/master/startvideo.sh'
+
 chmod uga+rwx startvideo.sh```
 
 ###Add startvideo.sh to .bashrc so it auto starts on login
