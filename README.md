@@ -17,12 +17,14 @@ There are two methods of installation, either:
 ##Script Installation
 
 ###Install omxplayer
-```sudo apt-get update
+```
+sudo apt-get update
 sudo apt-get -y install omxplayer
 ```
 
 ###Setup auto mounting of usb stick
-```sudo mkdir -p /mnt/usbdisk
+```
+sudo mkdir -p /mnt/usbdisk
 sudo echo \"/dev/sda1	/mnt/usbdisk	vfat	ro,defaults	0	0\" | sudo tee -a /etc/fstab
 sudo mount /mnt/usbdisk
 ```
@@ -31,7 +33,8 @@ sudo mount /mnt/usbdisk
 `mkdir /home/pi/video`
 
 ###Download startvideo.sh and put it in /home/pi/
-```wget https://raw.githubusercontent.com/derekcat/videolooper-raspbian/master/startvideo.sh'
+```
+wget https://raw.githubusercontent.com/derekcat/videolooper-raspbian/master/startvideo.sh'
 chmod uga+rwx startvideo.sh
 ```
 
