@@ -25,8 +25,7 @@ sudo apt-get -y install omxplayer
 ###Setup auto mounting of usb stick
 ```
 sudo mkdir -p /mnt/usbdisk
-sudo echo \"/dev/sda1	/mnt/usbdisk	vfat	ro,defaults	0	0\" | sudo tee -a /etc/fstab
-sudo mount /mnt/usbdisk
+sudo echo \"/dev/sda1		/mnt/usbdisk	vfat	ro,nofail	0	0\" | sudo tee -a /etc/fstab
 ```
 
 ###Create folder for videos in home directory
@@ -49,4 +48,3 @@ chmod uga+rwx startvideo.sh
 ###Expand your root partition if you want to
 `sudo raspi-config`
 * Select option: "1 Expand Filesystem"
-
