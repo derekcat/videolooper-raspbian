@@ -33,7 +33,7 @@ sudo echo \"/dev/sda1		/mnt/usbdisk	vfat	ro,nofail	0	0\" | sudo tee -a /etc/fsta
 
 ###Download startvideo.sh and put it in /home/pi/
 ```
-wget https://raw.githubusercontent.com/derekcat/videolooper-raspbian/master/startvideo.sh'
+wget https://raw.githubusercontent.com/timatron/videolooper-raspbian/master/startvideo.sh
 chmod uga+rwx startvideo.sh
 ```
 
