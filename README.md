@@ -11,7 +11,7 @@ The script will look for videos either in:
 
 There are two methods of installation, either:
 * Grab your own [raspbian img](https://www.raspberrypi.org/downloads/raspbian/), install it on the pi, and follow the steps below to install the videolooper.
-* Copy the prebuilt img that has already been setup using the steps below (`2016-05-10-raspbian-jessie-lite` was used as the base image).
+* Copy the [prebuilt img](http://timschwartz.org/downloads/2016-05-10-raspbian-jessie-lite-video-looper.img.zip) that has already been setup using the steps below (`2016-05-10-raspbian-jessie-lite` was used as the base raspbian image).
 
 ##Script Installation
 
