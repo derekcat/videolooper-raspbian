@@ -9,11 +9,13 @@ The script will look for videos either in:
 * the `video` directory in the home directory of the pi user
 * a usb stick plugged in before startup (this will not be remounted if you pull it out and plug it back in)
 
-There are two methods of installation, either:
-* Grab your own [raspbian img](https://www.raspberrypi.org/downloads/raspbian/), install it on the pi, and follow the steps below to install the videolooper.
-* Copy the [prebuilt img](http://timschwartz.org/downloads/2016-05-10-raspbian-jessie-lite-video-looper.img.zip) that has already been setup using the steps below (`2016-05-10-raspbian-jessie-lite` was used as the base raspbian image).
+#Installation
 
-##Script Installation
+##Grab 'n Go
+Copy the [prebuilt img](http://timschwartz.org/downloads/2016-05-10-raspbian-jessie-lite-video-looper.img.zip) to a micro SD card. The img was setup using the steps below and `2016-05-10-raspbian-jessie-lite` was used as the base raspbian image.
+
+##Roll Your Own
+Start with a [raspbian img](https://www.raspberrypi.org/downloads/raspbian/), install it on the pi, and follow the steps below to install the videolooper.
 
 ###Install omxplayer
 ```
