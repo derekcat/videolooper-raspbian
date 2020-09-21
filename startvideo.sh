@@ -17,14 +17,14 @@ getvids () # Since I want this to run in a loop, it should be a function
 unset VIDS # Empty the VIDS array
 CURRENT=0 # Reinitializes the video count
 IFS=$'\n' # Dont split up by spaces, only new lines when setting up the for loop
-for f in `ls $LOCAL_FILES | grep -E $FILE_FORMATS` # Step through the local files
+for f in `ls $LOCAL_FILES | grep -i -E $FILE_FORMATS` # Step through the local files
 do
 	VIDS[$CURRENT]=$LOCAL_FILES$f # add the filename found above to the VIDS array
 	# echo ${VIDS[$CURRENT]} # Print the array element we just added
 	let CURRENT+=1 # increment the video count
 done
 if [ -d "$USB_FILES" ]; then
-  for f in `ls $USB_FILES | grep -E $FILE_FORMATS` # Step through the usb files
+  for f in `ls $USB_FILES | grep -i -E $FILE_FORMATS` # Step through the usb files
 	do
 		VIDS[$CURRENT]=$USB_FILES$f # add the filename found above to the VIDS array
 		#echo ${VIDS[$CURRENT]} # Print the array element we just added
